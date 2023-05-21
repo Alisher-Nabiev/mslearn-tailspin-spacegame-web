@@ -8,8 +8,13 @@ trigger:
 
 pool:
   name: Default
-  demands: 
-   - Agent.Name -equals ALISHER-PC
+  demands: ['Agent.Name -equals ALISHER-PC']
+
+jobs:
+- job: 'Job1'
+  pool:
+    name: ${{parameters.pool}}
+    demands: ${{parameters.demands}}
 
 variables:
   solution: '**/*.sln'
