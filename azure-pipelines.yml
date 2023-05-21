@@ -7,8 +7,7 @@ trigger:
 - main
 
 pool:
-  name: Default
-  demands: ['Agent.Name -equals ALISHER-PC']
+  vmImage: ubuntu-latest
 
 
 variables:
