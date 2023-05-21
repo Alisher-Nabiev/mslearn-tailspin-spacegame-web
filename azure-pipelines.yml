@@ -9,7 +9,7 @@ trigger:
 pool:
   name: Default
   demands: 
-  - Tag -equals agent1
+  - Agent.Name -equals devops-VirtualBox
 
 variables:
   solution: '**/*.sln'
